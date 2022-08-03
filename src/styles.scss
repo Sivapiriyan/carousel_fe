@@ -1,0 +1,77 @@
+.slider {
+  overflow: hidden;
+  position: relative;
+ 
+
+  & .slide-list {
+    display: flex;
+    height: 400px;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    margin-bottom: 20px;
+
+    & .slide {
+      flex: 1 0 100%;
+      position: relative;
+      margin-bottom: 10;
+
+      & .slide-image {
+        display: flex;
+        margin: 0 auto;
+        max-height: 400px;
+        width: 100%;   
+             
+      }
+
+      & .slide-title {
+        text-align: center;
+        color: white;       
+        margin-top: -100px;        
+      }   
+      & .slide-subTitle {
+        text-align: center;
+        color: white;     
+              
+      }   
+    }
+  }  
+
+  /* ARROWS */
+
+  & .arrows {
+    color: white;
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    z-index: 1;
+
+    & .arrow {
+      height: 30px;
+      width: 30px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.left {
+        background-image: url(./assets/icons/arrow.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 5px;
+        transform: rotate(
+180deg);
+      }
+
+      &.right {
+        background-image: url(./assets/icons/arrow.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 5px;
+      }
+    }
+  }
+}
